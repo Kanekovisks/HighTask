@@ -1,4 +1,4 @@
 # Gestão de Chamados com IA
 # Equipe:
-# O que é?
-É um projeto acadêmico que procura desenvolver o protótipo de um software para gerenciamento de chamados sem tema específico com a implementação de uma IA para automação.
+# O que é o HighTask?
+É um projeto acadêmico que procura criar o protótipo de um software de Gerenciamento de Chamados com a implementação de uma IA para automação.
