@@ -1,13 +1,13 @@
 # Equipe:
-- [Gabriel Roxo](https://github.com/Kanekovisks/) - P.O.
+- [Gabriel Roxo](https://github.com/Kanekovisks/) - ***P.O.***
 
-- [Renata Honorato](https://github.com/reh2212) - Scrum Master
+- [Renata Honorato](https://github.com/reh2212) - ***Scrum Master***
 
-- [Arreginaldo JR.](https://github.com/arreginaldo) - Dev
+- [Arreginaldo JR.](https://github.com/arreginaldo) - ***Dev***
 
-- [Camila Dos Santos](https://github.com/camilape-dev) - Dev
+- [Camila Dos Santos](https://github.com/camilape-dev) - ***Dev***
 
-- [Erika Cordeiro](https://github.com/apserika) - Dev
+- [Erika Cordeiro](https://github.com/apserika) - ***Dev***
 
 - [Paloma Rodrigues]() - Dev
 
