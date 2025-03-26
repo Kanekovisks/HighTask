@@ -1,23 +1,24 @@
-Objetivo geral do sistema:
+** Objetivo geral do sistema: **
 Automatizar e gerir chamados e o suporte técnico, usando IA para melhorar a eficiência no atendimento e resolver problemas de maneira mais rápida.
 
 ## Backlog
-  * Gerenciar Usuário
+
+  ** Gerenciar Usuário **
 Permitir criar, editar, excluir e desativar contas de usuário.
 Controlar níveis de acesso (admin, técnico, usuário comum).
 Agrupar todas as ações de gerenciamento de usuários reduz a redundância e facilita a manutenção do código, além de tornar o fluxo de desenvolvimento mais coeso.
 
-  * Gerenciar Chamados
+  ** Gerenciar Chamados **
 Permitir que técnicos editem, resolvam e fechem chamados.
 Técnicos podem adicionar observações e registrar o tempo gasto.
 Reunir tudo no mesmo requisito ajuda a criar uma visão única para o técnico, sem dividir em pequenas ações separadas.
 
-  * Classificação Inteligente de Chamados (IA)
+  ** Classificação Inteligente de Chamados (IA) **
 O sistema deve identificar automaticamente a categoria do problema com base na descrição fornecida.
 Prioriza chamados críticos usando análise de palavras-chave.
 A IA precisa trabalhar integrada à criação do chamado, não como algo separado, para tornar o processo mais fluido e dinâmico.
 
-  * Relatórios e Métricas de Suporte
+  ** Relatórios e Métricas de Suporte **
 Gera relatórios de desempenho (tempo médio de resolução, volume de chamados, satisfação do usuário).
 Visualização gráfica para facilitar a análise de produtividade.
 Centralizar todos os relatórios em um único requisito melhora a experiência de análise e reduz o retrabalho na criação de diferentes painéis.
