@@ -1,9 +1,14 @@
 # Equipe:
 Gabriel D. Roxo - P.O.
+
 Renata Honorato - Scrum Master
+
 Arreginaldo JR. 
+
 Camila Do Santos Pereira
+
 Erika Cordeiro
+
 Paloma Rodrigues
 
 # O que é o HighTask?
