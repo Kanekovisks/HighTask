@@ -1,11 +1,11 @@
 # Equipe:
-Gabriel D. Roxo - P.O.
+[Gabriel Roxo(https://github.com/Kanekovisks/)] - P.O.
 
 Renata Honorato - Scrum Master
 
 Arreginaldo JR. 
 
-Camila Do Santos Pereira
+Camila Dos Santos
 
 Erika Cordeiro
 
