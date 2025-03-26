@@ -1,5 +1,5 @@
 # Equipe:
-[Gabriel Roxo(https://github.com/Kanekovisks/)] - P.O.
+[Gabriel Roxo](https://github.com/Kanekovisks/) - P.O.
 
 Renata Honorato - Scrum Master
 
