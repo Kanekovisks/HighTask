@@ -1,6 +1,7 @@
-[Equipe](#equipe)
+# <center> HighTask </center> 
+</center> [Equipe](#equipe) • [O que é HighTask?](#o-que-e-o-hightask?) • [Entregas](#entregas) </center> 
 
-# Equipe:
+## Equipe:
 - [Gabriel Roxo](https://github.com/Kanekovisks) - ***P.O.***
 
 - [Renata Honorato](https://github.com/reh2212) - ***Scrum Master***
