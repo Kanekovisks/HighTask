@@ -1,5 +1,5 @@
-# <center> HighTask </center> 
-</center> [Equipe](#equipe) • [O que é HighTask?](#o-que-e-o-hightask?) • [Entregas](#entregas) </center> 
+# <p align=center> HighTask
+<p align=center> [Equipe](#equipe) • [O que é HighTask?](#o-que-e-o-hightask?) • [Entregas](#entregas) 
 
 ## Equipe:
 - [Gabriel Roxo](https://github.com/Kanekovisks) - ***P.O.***
