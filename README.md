@@ -19,7 +19,7 @@
 - [Paloma Rodrigues]() - ***Dev***
 
 ## O que é o HighTask?
-É um projeto acadêmico que procura criar o protótipo de um software de Gerenciamento de Chamados com a implementação de uma IA para automação. Nesse software os setores dentro da empresa poderão se comunicar por chamados com redirecionamentos especializados com ajuda de uma Inteligência Artificial para sugestões de soluçõese pré-redirecionamentos dos chamados pela empresa seguindo com a ideia de aumentar o desempenho e eficiência na resolução de pedidos e problemas. 
+É um projeto acadêmico que procura criar o protótipo de um software de Gerenciamento de Chamados com a implementação de uma IA para automação. Nesse software os setores dentro da empresa poderão se comunicar por chamados com redirecionamentos especializados com ajuda de uma Inteligência Artificial para sugestões de soluções e pré-redirecionamentos dos chamados pela empresa seguindo com a ideia de aumentar o desempenho e eficiência na resolução de pedidos e problemas. 
 
 ## Entregas
 ### 1º Sprint
