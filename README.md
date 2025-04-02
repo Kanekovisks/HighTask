@@ -1,8 +1,8 @@
 # <p align=center> HighTask
 <p align="center">
-   <a href="#equipe">Equipe</a>
-   <a href="#o-que-e-hightask?">Sobre</a> •
-   <a href="#entregas">Entregas</a> •
+   <a href="#equipe">Equipe</a> •
+   <a href="#o-que-e-hightask">Sobre</a> •
+   <a href="#entregas">Entregas</a>
 </p>
 
 ## Equipe:
