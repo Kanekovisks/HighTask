@@ -1,2 +1,41 @@
 ** SPRINT BACKLOG **
+=======================================================
+1º Sprint
+-------------------------------------------------------
+** Gerenciar Usuário **
+   *Cadastro de Usuário*
+   *Controle de Acesso*
 
+** Gerenciar Chamados **
+   *Criação de Chamados*
+   *Fechamento de Chamados*
+=======================================================
+
+=======================================================
+2º Sprint
+-------------------------------------------------------
+** Gerenciar Usuário **
+   *Edição de Perfil*
+   *Desativação e Exclusão de Contas*
+
+** Gerenciar Chamados **
+   *Atribuição e Priorização*
+   *Edição e Resolução de Chamados*
+=======================================================
+
+=======================================================
+3º Sprint
+-------------------------------------------------------
+** Classificação Inteligente de Chamados (IA) **
+   *Análise Automática da Descrição*
+   *Detecção de Prioridade Crítica*
+=======================================================
+
+=======================================================
+4º Sprint
+-------------------------------------------------------
+** Relatórios e Métricas de Suporte **
+   *Geração de Relatórios*
+   *Painel de Visualização Gráfica*
+   *Medição de Satisfação do Usuário*
+=======================================================
