@@ -5,20 +5,16 @@
 ** Gerenciar Usuário **
    *Cadastro de Usuário*
    *Controle de Acesso*
-
-** Gerenciar Chamados **
-   *Criação de Chamados*
-   *Fechamento de Chamados*
+   *Edição de Perfil*
+   *Desativação e Exclusão de Contas*
 =======================================================
 
 =======================================================
 2º Sprint
 -------------------------------------------------------
-** Gerenciar Usuário **
-   *Edição de Perfil*
-   *Desativação e Exclusão de Contas*
-
 ** Gerenciar Chamados **
+   *Criação de Chamados*
+   *Fechamento de Chamados*
    *Atribuição e Priorização*
    *Edição e Resolução de Chamados*
 =======================================================
