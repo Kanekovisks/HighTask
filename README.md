@@ -21,7 +21,7 @@
 ## O que é o HighTask?
 É um projeto acadêmico que procura criar o protótipo de um software de Gerenciamento de Chamados com a implementação de uma IA para automação. 
 
-Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os setores dentro da empresa possuem métodos convencionais de comunicação como e-mails e telefonêmas, os quais acabam gerando problemas de demora para resolução de problemas e por este motivo foi determinado a aplicação um software de chamados com implementação IA para facilitar e automatizar a distribuição dos chamados pelos setores da empresa aumentando o desempenho e eficiência da aplicação de soluções dentro da empresa. 
+Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os setores dentro da empresa possuem métodos convencionais de comunicação como e-mails e telefonemas, os quais acabam gerando problemas de demora para resolução de tarefas e demandas, por este motivo foi determinado a aplicação um software de chamados com implementação IA para facilitar e automatizar a distribuição dos chamados pelos setores da empresa aumentando o desempenho e eficiência da aplicação de soluções dentro da empresa. 
 
 ## Entregas
 ### 1º Sprint
