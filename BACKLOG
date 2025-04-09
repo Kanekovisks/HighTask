@@ -6,11 +6,13 @@ Automatizar e gerir chamados e o suporte técnico, usando IA para melhorar a efi
 ** Gerenciar Usuário **
  *Cadastro de Usuário*
  • Permitir que administradores criem novas contas.
- • Validar e-mails duplicados e impor regras de senha.
+ • Verificar e-mails duplicados e impor regras de senha.
  • Notificar o usuário por e-mail após a criação da conta.
 
  *Edição de Perfil*
  • Administradores podem alterar permissões e cargos.
+ • Administradores podem alterar dados de contas já criadas.
+ • Notificar alterações e permissões via e-mail das contas criadas.
 
  *Desativação e Exclusão de Contas*
  • Administradores podem desativar contas sem excluí-las.
@@ -19,6 +21,7 @@ Automatizar e gerir chamados e o suporte técnico, usando IA para melhorar a efi
  *Controle de Acesso*
  • Definir permissões baseadas em níveis de acesso (admin, técnico, usuário comum).
  • Garantir que apenas usuários autorizados acessem funcionalidades restritas.
+ • Administradores podem alterar senha de acesso dos usuários.
 
 
 
