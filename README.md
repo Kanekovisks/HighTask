@@ -14,7 +14,7 @@
 
 - [Camila Dos Santos](https://github.com/camilape-dev) - ***Dev***
 
-- [Paloma Rodrigues]() - ***Dev***
+- [Paloma Rodrigues](https://github.com/prpaloma) - ***Dev***
 
 ## O que é o HighTask?
 É um projeto acadêmico que procura criar o protótipo de um software de Gerenciamento de Chamados com a implementação de uma IA para automação. 
