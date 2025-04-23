@@ -36,7 +36,7 @@ Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os se
    - Atribuição e Priorização
    - Edição e Resolução de Chamados
  
-### 3º Sprint | 23 / 04 📦
+### 3º Sprint | 23 / 04 ✔
 ***Classificação Inteligente de Chamados (IA)***
    - Análise Automática da Descrição
    - Detecção de Prioridade Crítica
