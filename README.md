@@ -46,3 +46,7 @@ Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os se
    - Geração de Relatórios
    - Painel de Visualização Gráfica
    - Medição de Satisfação do Usuário
+
+### 5º Sprint | 07 / 05 📦
+***Projeto de implantação em UML***
+   - Anexo de diagramas de implantação*
