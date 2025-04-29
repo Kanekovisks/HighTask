@@ -49,4 +49,4 @@ Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os se
 
 ### 5º Sprint | 07 / 05 📦
 ***Projeto de implantação em UML***
-   - Anexo de diagramas de implantação*
+   - Anexo de diagramas de implantação
