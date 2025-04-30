@@ -41,7 +41,7 @@ Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os se
    - Análise Automática da Descrição
    - Detecção de Prioridade Crítica
 
-### 4º Sprint | 30 / 04 📦
+### 4º Sprint | 30 / 04 ✔
 ***Relatórios e Métricas de Suporte***
    - Geração de Relatórios
    - Painel de Visualização Gráfica
