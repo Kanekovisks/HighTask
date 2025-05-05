@@ -2,7 +2,7 @@
 
 CREATE TABLE PerfilAcesso (
     Id_Perfil int PRIMARY KEY,
-    Acesso varchar(30)
+    Acesso varchar(20)
 );
 
 CREATE TABLE Usuario (
@@ -11,37 +11,42 @@ CREATE TABLE Usuario (
     Email varchar(50),
     Senha varchar(16),
     Ativo boolean,
-    fk_PerfilAcesso_Id_Perfil int
+    fk_PerfilAcesso_Id_Perfil int,
+    fk_SistemaIA_Id_IA int
 );
 
 CREATE TABLE Chamado (
     Id_Chamado int,
     Titulo varchar(50),
-    Descricao varchar(200),
-    Status varchar(10),
+    Descricao varchar(250),
+    Status varchar(20),
     Prioridade varchar(20),
     DataAbertura date,
     Id_UsuarioCriador int,
     fk_Usuario_Id_Usuario int,
     fk_Categoria_Id_Categoria int,
+    fk_SistemaIA_Id_IA int,
     PRIMARY KEY (Id_Chamado, Id_UsuarioCriador)
 );
 
-CREATE TABLE Relatorio_Tipo (
-    Id_Relatorio int,
+CREATE TABLE Relatorio (
+    Id_Relatorio int PRIMARY KEY,
     DataInicio date,
     DataFim date,
-    Dados void,
-    Id_TipoRelatorio int,
-    Tipo varchar(20),
-    fk_Usuario_Id_Usuario int,
-    PRIMARY KEY (Id_Relatorio, Id_TipoRelatorio)
+    Dados varchar(100),
+    fk_Tipo_Id_TipoRelatorio int,
+    fk_Usuario_Id_Usuario int
+);
+
+CREATE TABLE Tipo (
+    Id_TipoRelatorio int PRIMARY KEY,
+    Tipo varchar(20)
 );
 
 CREATE TABLE Observacao (
     Id_Observacao int PRIMARY KEY,
     Texto varchar(100),
-    TempoGastoMinutos date,
+    TempoGastoMinutos int,
     DataHora date,
     fk_Chamado_Id_Chamado int,
     fk_Chamado_Id_UsuarioCriador int,
@@ -52,10 +57,25 @@ CREATE TABLE Categoria (
     Id_Categoria int PRIMARY KEY,
     Categoria varchar(50)
 );
+
+CREATE TABLE SistemaIA (
+    Id_IA int PRIMARY KEY,
+    Nome varchar(20),
+    Versao double,
+    Status varchar(20),
+    Precisao double,
+    TaxaFalha double,
+    Observacoes varchar(200)
+);
  
 ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_2
     FOREIGN KEY (fk_PerfilAcesso_Id_Perfil)
     REFERENCES PerfilAcesso (Id_Perfil)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_3
+    FOREIGN KEY (fk_SistemaIA_Id_IA)
+    REFERENCES SistemaIA (Id_IA)
     ON DELETE RESTRICT;
  
 ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_2
@@ -68,7 +88,17 @@ ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_3
     REFERENCES Categoria (Id_Categoria)
     ON DELETE RESTRICT;
  
-ALTER TABLE Relatorio_Tipo ADD CONSTRAINT FK_Relatorio_Tipo_2
+ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_4
+    FOREIGN KEY (fk_SistemaIA_Id_IA)
+    REFERENCES SistemaIA (Id_IA)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Relatorio ADD CONSTRAINT FK_Relatorio_2
+    FOREIGN KEY (fk_Tipo_Id_TipoRelatorio)
+    REFERENCES Tipo (Id_TipoRelatorio)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Relatorio ADD CONSTRAINT FK_Relatorio_3
     FOREIGN KEY (fk_Usuario_Id_Usuario)
     REFERENCES Usuario (Id_Usuario)
     ON DELETE RESTRICT;
