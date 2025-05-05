@@ -1,0 +1,84 @@
+/* PIM3 BD Lógico: */
+
+CREATE TABLE PerfilAcesso (
+    Id_Perfil int PRIMARY KEY,
+    Acesso varchar(30)
+);
+
+CREATE TABLE Usuario (
+    Id_Usuario int PRIMARY KEY,
+    Nome varchar(50),
+    Email varchar(50),
+    Senha varchar(16),
+    Ativo boolean,
+    fk_PerfilAcesso_Id_Perfil int
+);
+
+CREATE TABLE Chamado (
+    Id_Chamado int,
+    Titulo varchar(50),
+    Descricao varchar(200),
+    Status varchar(10),
+    Prioridade varchar(20),
+    DataAbertura date,
+    Id_UsuarioCriador int,
+    fk_Usuario_Id_Usuario int,
+    fk_Categoria_Id_Categoria int,
+    PRIMARY KEY (Id_Chamado, Id_UsuarioCriador)
+);
+
+CREATE TABLE Relatorio_Tipo (
+    Id_Relatorio int,
+    DataInicio date,
+    DataFim date,
+    Dados void,
+    Id_TipoRelatorio int,
+    Tipo varchar(20),
+    fk_Usuario_Id_Usuario int,
+    PRIMARY KEY (Id_Relatorio, Id_TipoRelatorio)
+);
+
+CREATE TABLE Observacao (
+    Id_Observacao int PRIMARY KEY,
+    Texto varchar(100),
+    TempoGastoMinutos date,
+    DataHora date,
+    fk_Chamado_Id_Chamado int,
+    fk_Chamado_Id_UsuarioCriador int,
+    fk_Usuario_Id_Usuario int
+);
+
+CREATE TABLE Categoria (
+    Id_Categoria int PRIMARY KEY,
+    Categoria varchar(50)
+);
+ 
+ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_2
+    FOREIGN KEY (fk_PerfilAcesso_Id_Perfil)
+    REFERENCES PerfilAcesso (Id_Perfil)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_2
+    FOREIGN KEY (fk_Usuario_Id_Usuario)
+    REFERENCES Usuario (Id_Usuario)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_3
+    FOREIGN KEY (fk_Categoria_Id_Categoria)
+    REFERENCES Categoria (Id_Categoria)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Relatorio_Tipo ADD CONSTRAINT FK_Relatorio_Tipo_2
+    FOREIGN KEY (fk_Usuario_Id_Usuario)
+    REFERENCES Usuario (Id_Usuario)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Observacao ADD CONSTRAINT FK_Observacao_2
+    FOREIGN KEY (fk_Chamado_Id_Chamado, fk_Chamado_Id_UsuarioCriador)
+    REFERENCES Chamado (Id_Chamado, Id_UsuarioCriador)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Observacao ADD CONSTRAINT FK_Observacao_3
+    FOREIGN KEY (fk_Usuario_Id_Usuario)
+    REFERENCES Usuario (Id_Usuario)
+    ON DELETE CASCADE;
