@@ -1,17 +1,12 @@
 /* PIM3 BD Lógico: */
 
-CREATE TABLE PerfilAcesso (
-    Id_Perfil int PRIMARY KEY,
-    Acesso varchar(20)
-);
-
 CREATE TABLE Usuario (
     Id_Usuario int PRIMARY KEY,
     Nome varchar(50),
     Email varchar(50),
     Senha varchar(16),
     Ativo boolean,
-    fk_PerfilAcesso_Id_Perfil int,
+    Perfil varchar(20),
     fk_SistemaIA_Id_IA int
 );
 
@@ -23,39 +18,19 @@ CREATE TABLE Chamado (
     Prioridade varchar(20),
     DataAbertura date,
     Id_UsuarioCriador int,
+    Categoria varchar(30),
     fk_Usuario_Id_Usuario int,
-    fk_Categoria_Id_Categoria int,
     fk_SistemaIA_Id_IA int,
-    PRIMARY KEY (Id_Chamado, Id_UsuarioCriador)
+    PRIMARY KEY (Id_Chamado, Id_UsuarioCriador, Categoria)
 );
 
 CREATE TABLE Relatorio (
     Id_Relatorio int PRIMARY KEY,
     DataInicio date,
     DataFim date,
+    Tipo varchar(20),
     Dados varchar(100),
-    fk_Tipo_Id_TipoRelatorio int,
     fk_Usuario_Id_Usuario int
-);
-
-CREATE TABLE Tipo (
-    Id_TipoRelatorio int PRIMARY KEY,
-    Tipo varchar(20)
-);
-
-CREATE TABLE Observacao (
-    Id_Observacao int PRIMARY KEY,
-    Texto varchar(100),
-    TempoGastoMinutos int,
-    DataHora date,
-    fk_Chamado_Id_Chamado int,
-    fk_Chamado_Id_UsuarioCriador int,
-    fk_Usuario_Id_Usuario int
-);
-
-CREATE TABLE Categoria (
-    Id_Categoria int PRIMARY KEY,
-    Categoria varchar(50)
 );
 
 CREATE TABLE SistemaIA (
@@ -67,13 +42,16 @@ CREATE TABLE SistemaIA (
     TaxaFalha double,
     Observacoes varchar(200)
 );
+
+CREATE TABLE Direciona_Usuario_SistemaIA_Chamado (
+    fk_Usuario_Id_Usuario int,
+    fk_SistemaIA_Id_IA int,
+    fk_Chamado_Id_Chamado int,
+    fk_Chamado_Id_UsuarioCriador int,
+    fk_Chamado_Categoria varchar(30)
+);
  
 ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_2
-    FOREIGN KEY (fk_PerfilAcesso_Id_Perfil)
-    REFERENCES PerfilAcesso (Id_Perfil)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_3
     FOREIGN KEY (fk_SistemaIA_Id_IA)
     REFERENCES SistemaIA (Id_IA)
     ON DELETE RESTRICT;
@@ -84,31 +62,26 @@ ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_2
     ON DELETE CASCADE;
  
 ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_3
-    FOREIGN KEY (fk_Categoria_Id_Categoria)
-    REFERENCES Categoria (Id_Categoria)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Chamado ADD CONSTRAINT FK_Chamado_4
     FOREIGN KEY (fk_SistemaIA_Id_IA)
     REFERENCES SistemaIA (Id_IA)
     ON DELETE RESTRICT;
  
 ALTER TABLE Relatorio ADD CONSTRAINT FK_Relatorio_2
-    FOREIGN KEY (fk_Tipo_Id_TipoRelatorio)
-    REFERENCES Tipo (Id_TipoRelatorio)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Relatorio ADD CONSTRAINT FK_Relatorio_3
     FOREIGN KEY (fk_Usuario_Id_Usuario)
     REFERENCES Usuario (Id_Usuario)
     ON DELETE RESTRICT;
  
-ALTER TABLE Observacao ADD CONSTRAINT FK_Observacao_2
-    FOREIGN KEY (fk_Chamado_Id_Chamado, fk_Chamado_Id_UsuarioCriador)
-    REFERENCES Chamado (Id_Chamado, Id_UsuarioCriador)
-    ON DELETE CASCADE;
- 
-ALTER TABLE Observacao ADD CONSTRAINT FK_Observacao_3
+ALTER TABLE Direciona_Usuario_SistemaIA_Chamado ADD CONSTRAINT FK_Direciona_Usuario_SistemaIA_Chamado_1
     FOREIGN KEY (fk_Usuario_Id_Usuario)
     REFERENCES Usuario (Id_Usuario)
-    ON DELETE CASCADE;
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Direciona_Usuario_SistemaIA_Chamado ADD CONSTRAINT FK_Direciona_Usuario_SistemaIA_Chamado_2
+    FOREIGN KEY (fk_SistemaIA_Id_IA)
+    REFERENCES SistemaIA (Id_IA)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Direciona_Usuario_SistemaIA_Chamado ADD CONSTRAINT FK_Direciona_Usuario_SistemaIA_Chamado_3
+    FOREIGN KEY (fk_Chamado_Id_Chamado, fk_Chamado_Id_UsuarioCriador, fk_Chamado_Categoria)
+    REFERENCES Chamado (Id_Chamado, Id_UsuarioCriador, Categoria)
+    ON DELETE NO ACTION;
