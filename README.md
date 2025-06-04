@@ -47,6 +47,6 @@ Nesse projeto foi atribuído o cenário de um empresa de médio porte onde os se
    - Painel de Visualização Gráfica
    - Medição de Satisfação do Usuário
 
-### 5º Sprint | 07 / 05 📦
+### 5º Sprint | 07 / 05 ✔
 ***Projeto de implantação em UML***
    - Anexo de diagramas de implantação
