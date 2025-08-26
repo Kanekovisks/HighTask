@@ -12,8 +12,6 @@
 
 - [Arreginaldo JR.](https://github.com/arreginaldo) - ***Dev***
 
-- [Camila Dos Santos](https://github.com/camilape-dev) - ***Dev***
-
 - [Paloma Rodrigues](https://github.com/prpaloma) - ***Dev***
 
 ## O que é o HighTask?
